@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        .projects {
+            padding: 20px;
+        }
+        .project {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul li {
+                margin-left: 0;
+            }
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">My Portfolio</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <nav>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="projects" id="projects">
+    <div class="project">
+        <h2>Project Title 1</h2>
+        <p>Description of project 1. This is where you can detail your work and what it involved.</p>
+    </div>
+    <div class="project">
+        <h2>Project Title 2</h2>
+        <p>Description of project 2. This is where you can detail your work and what it involved.</p>
+    </div>
+    <!-- Add more projects as needed -->
+</section>
+
+<footer>
+    &copy; 2024 My Portfolio
+</footer>
+
+<script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.getElementById('navMenu').classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
